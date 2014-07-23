@@ -4,11 +4,7 @@ def nth_prime(nth)
   while primes.length <= nth do
     primetests=[]
     (2..index).each do |number|
-      if index%number != 0 || index == number
-        primetests << true
-      else
-        primetests << false
-      end
+      index%number != 0 || index == number ? primetests << true : primetests << false
     end
     if primetests.all?
       primes << index
